@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Days Since</title>
+<meta name="description" content="Count the days since or until anything. Simple, private, no account.">
+<meta name="theme-color" content="#4f8ef7">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header><h1>Days Since</h1></header>
+
+  <section id="empty" hidden>
+    <div class="big">⏳</div>
+    <h2>Nothing counted yet</h2>
+    <p>Tap + to count the days since (or until) anything.</p>
+  </section>
+
+  <section id="list"></section>
+</main>
+
+<button id="add" aria-label="Add counter">+</button>
+
+<dialog id="editor">
+  <form id="form" method="dialog">
+    <h2 id="editor-title">New counter</h2>
+    <label for="f-title">Title</label>
+    <input id="f-title" type="text" placeholder="e.g. Last oil change" maxlength="40" autocomplete="off">
+    <label for="f-emoji">Emoji</label>
+    <input id="f-emoji" type="text" maxlength="4" autocomplete="off">
+    <label>Type</label>
+    <div class="seg">
+      <button type="button" data-mode="since">Days since</button>
+      <button type="button" data-mode="until">Days until</button>
+    </div>
+    <label for="f-date">Date</label>
+    <input id="f-date" type="date">
+    <label>Color</label>
+    <div id="swatches"></div>
+    <div class="row">
+      <button type="button" id="delete" class="btn danger" hidden>Delete</button>
+      <button type="button" id="cancel" class="btn">Cancel</button>
+      <button type="submit" class="btn primary">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="paywall" class="paywall">
+  <div class="big">♾️</div>
+  <h2>Unlimited counters</h2>
+  <p>The free version includes 3 counters. Unlock unlimited for a single payment of <b id="price">$2.99</b>. No subscription.</p>
+  <button id="buy" class="btn primary" style="width:100%">Unlock</button>
+  <form id="redeem">
+    <label for="f-code">Already paid? Enter your unlock code</label>
+    <input id="f-code" type="text" autocomplete="off" autocapitalize="off">
+    <p id="paywall-msg" class="msg"></p>
+    <button type="submit" class="btn" style="width:100%">Apply code</button>
+  </form>
+  <button id="paywall-close" class="link">Not now</button>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
