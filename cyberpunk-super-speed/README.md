@@ -11,18 +11,32 @@ It combines two effects, and each one can be switched off:
 | Slow world | Everything except V runs slower (the same system the Sandevistan uses) | 20% speed |
 | Fast legs | V's top running speed and acceleration are multiplied | 2x |
 
-## What you need
+## Easy install (Steam on Windows)
+
+1. Download [`Install-SuperSpeed.bat`](Install-SuperSpeed.bat) and double-click it.
+   If Windows says "Windows protected your PC", click **More info → Run anyway**.
+2. It finds your game, offers to install the two modding tools the mod needs
+   (RED4ext and Cyber Engine Tweaks) from their official GitHub pages, and
+   adds the mod. Close the game before running it.
+3. Start the game and follow the "Next" steps it prints: pick a CET overlay
+   key, then set your Super Speed keys under **Bindings**.
+
+If it can't find the game, it asks you to paste the game folder path.
+
+## What you need (manual install)
 
 - Cyberpunk 2077 on PC (Steam, GOG or Epic)
+- **RED4ext**, from [GitHub releases](https://github.com/WopsS/RED4ext/releases).
+  Cyber Engine Tweaks needs it.
 - **Cyber Engine Tweaks (CET)**, from [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/107) or
   [GitHub releases](https://github.com/maximegmd/CyberEngineTweaks/releases).
   Its version must match your game version.
 
-## Install
+## Manual install
 
-1. **Install CET** if you don't have it. Copy its files into your game folder
-   (in Steam: right-click Cyberpunk 2077 → Manage → Browse local files).
-   Start the game once; CET asks you to choose a key for its overlay.
+1. **Install RED4ext, then CET**, if you don't have them. Unzip each one into
+   your game folder (in Steam: right-click Cyberpunk 2077 → Manage → Browse
+   local files). Start the game once; CET asks you to choose a key for its overlay.
 2. **Get this mod.** Download
    [this branch as a ZIP](https://github.com/bjtmm/dayssince/archive/refs/heads/claude/cyberpunk-speed-mod-b0znjq.zip)
    and unzip it.
